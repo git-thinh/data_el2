@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="swfobject.js"></script>
+    <script src="jwplayer.js"></script>
+</head>
+<body>
+    <p id="container1"></p>
+    <script type="text/javascript">
+        var flashvars = {
+            //file: '/files/video.mp4',
+            //file: '/files/1.mp4',
+            //file: '/files/2.mp4',
+            file: '/files/3.mp4',
+            autostart: 'true'
+        };
+        var params = {
+            allowfullscreen: 'true',
+            allowscriptaccess: 'always'
+        };
+        var attributes = {
+            id: 'player1',
+            name: 'player1'
+        };
+        swfobject.embedSWF('player.swf', 'container1', '480', '270', '9.0.115', 'false', flashvars, params, attributes);
+    </script>
+
+</body>
+</html>

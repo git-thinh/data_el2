@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" /> 
+    <link href="/player/asset/test.css" rel="stylesheet" />
+    <script src="/player/asset/jwplayer/5.10/swfobject.js"></script>
+    <script src="/player/asset/jwplayer/5.10/jwplayer.js"></script>
+</head>
+<body> 
+    <div id="player-bekle"></div>
+    <script type="text/javascript">
+        jwplayer("player-bekle").setup({
+            //file: "/files/1.mp4",
+            height: 350,
+            width: 700,
+            skin: "/player/asset/jwplayer/5.10/skins/bekle.zip",
+            flashplayer: "/player/asset/jwplayer/5.10/player.swf",
+            playlist: [
+                {
+                    title: "cool video 1", duration: 32, file: "/files/1.mp4", image: "/files/1.jpg", start: 3
+                },
+                {
+                    title: "cool video 2", duration: 124, file: "/files/2.mp4", image: "/files/1.jpg", start: 3
+                },
+                {
+                    title: "cool video 3", duration: 542, file: "/files/3.mp4", image: "/files/1.jpg", start: 3
+                }],
+            "playlist.position": "right",
+            "playlist.size": 150, 
+        });
+    </script> 
+</body>
+</html>

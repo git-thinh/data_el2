@@ -1,0 +1,13 @@
+<!-- Example Playlist file - customize for your own use. 
+Full instructions at http://www.mediacollege.com/flash/media-player/720x360/playlist.html -->
+<playlist>
+   <folder label="Folder 1">
+        <file label="Clip 1" url="clip1.flv" desc="This is the first clip" />
+        <file label="Clip 2" url="clip2.flv" desc="This is the second clip" />
+   </folder>
+   <folder label="Folder 2">
+        <file label="Clip 3" url="clip3.flv" desc="This is the third clip" />
+        <file label="Clip 4" url="clip4.flv" desc="This is the fourth clip" />
+   </folder>
+</playlist>
+

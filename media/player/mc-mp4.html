@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="asset/test.css" rel="stylesheet" />
+    <script src="asset/swfobject/swfobject.js"></script>
+</head>
+<body>
+    <div id="myContent"></div>
+    <script type="text/javascript">
+        swfobject.embedSWF("/files/1.mp4", "myContent", "400", "300", "9.0.0", "/asset/swfobject/expressInstall.swf");
+    </script>
+    <object id="myId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="140">
+        <param name="movie" value="/files/1.mp4" />
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="/files/1.mp4" width="300" height="140">
+            <!--<![endif]-->
+            <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+    </object>
+</body>
+</html>

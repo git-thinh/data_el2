@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/player/asset/test.css" rel="stylesheet" />
+    <script src="/player/asset/jwplayer/5.10/swfobject.js"></script>
+    <script src="/player/asset/jwplayer/5.10/jwplayer.js"></script>
+</head>
+<body>
+    <div id="player-bekle"></div>
+    <script type="text/javascript">
+        jwplayer("player-bekle").setup({
+            file: "/files/1.mp4",
+            height: 350,
+            width: 600,
+            skin: "/player/asset/jwplayer/5.10/skins/bekle.zip",
+            flashplayer: "/player/asset/jwplayer/5.10/player.swf",
+            wmode: "opaque", // window, opaque, or transparent
+            events: {
+                onComplete: function () {
+                    console.log("the video is finished!");
+                },
+                onReady: function () {
+                    console.log("the video is ready to play!");
+                    this.play();
+                },
+                onVolume: function (event) {
+                    console.log("the new volume is " + event.volume);
+                },
+                onError: function (event) {
+                    console.log('ERROR: ', event.message);
+                },
+                onFullscreen: function (event) {
+                    console.log('onFullscreen: ', event.fullscreen);
+                },
+                onMute: function (event) {
+                    console.log('onMute: ', event.mute);
+                },
+                onTime: function (event) { 
+                    //console.log('onTime ' + event.duration + ': ' + event.position);
+                },
+                onBufferChange: function (event) {
+                    console.log('onBufferChange: ', event.bufferPercent + ' %');
+                },
+                onBufferFull: function () {
+                    console.log('onBufferFull ');
+                },
+                onResize: function (event) {
+                    console.log('onResize ', event);
+                },
+                onPlay: function (event) {
+                    //Fired when the player enters the PLAYING state. 
+                    //Event attributes: •oldstate: String: the state the player moved from. Can be PAUSED or BUFFERING. 
+                    console.log('onPlay: ', event.oldstate);
+                },
+                onPause: function (event) {
+                    console.log('onPause: ', event.oldstate);
+                },
+            },
+        });
+
+        //jwplayer("player-bekle").remove();
+        // jQuery
+        //jwplayer().setVolume(50).onComplete(function(){ alert("done!"); }).play();
+
+        // setFullscreen(true|false)
+        // setMute(true|false)
+        // resize( int width, int height)
+
+        // play(state) 
+        //      if set true the player will start playing. If set false the player will pause. If not set, the player will toggle playback. 
+        // pause(state) 
+        //      if set true the player will pause playback. If set false the player will play. If not set, the player will toggle playback.
+        // stop() 
+        //      Stops the player and unloads the currently playing media ﬁle from memory. 
+        // seek(position) 
+        //      Jump to the speciﬁed position within the currently playing item. 
+        //      Parameters: •position:Number: Requested position in seconds. 
+        // setVolume(volume) 
+        //      Sets the player’s audio volume. Parameters: •volume:Number: The new volume percentage; 0 and 100. 
+    </script>
+    <ul>
+        <li onclick="jwplayer().play()">Start the player</li>
+        <li onclick="alert(jwplayer().getPosition())">Get current position</li>
+    </ul>
+
+</body>
+</html>

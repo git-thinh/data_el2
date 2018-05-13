@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/player/asset/test.css" rel="stylesheet" />
+    <script src="/player/asset/jwplayer/5.3/jwplayer.js"></script>
+    <script src="/player/asset/jwplayer/5.3/swfobject.js"></script>
+</head>
+<body>
+    <div id="container_player"></div>
+    <script type="text/javascript">
+        var flashvars = {
+            //file: '/files/video.mp4',
+            //file: '/files/1.mp4',
+            //file: '/files/2.mp4',
+            file: '/files/3.mp4',
+            autostart: 'true'
+        };
+        var params = {
+            allowfullscreen: 'true',
+            allowscriptaccess: 'always'
+        };
+        var attributes = {
+            id: 'player1',
+            name: 'player1'
+        };
+        swfobject.embedSWF('/player/asset/jwplayer/5.3/player.swf', 'container_player', '480', '270', '9.0.115', 'false', flashvars, params, attributes);
+    </script>
+
+</body>
+</html>
