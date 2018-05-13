@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/player/asset/test.css" rel="stylesheet" />
+    <script src="/player/asset/swfobject/swfobject.js"></script> 
+    <script src="/player/asset/jwplayer/7.8.2/jwplayer.js"></script>
+</head>
+<body>
+    <div id="player-bekle"></div>
+    <script type="text/javascript">
+        jwplayer("player-bekle").setup({
+            file: "/files/1.mp4",
+            height: 350,
+            width: 600,
+            //skin: "/player/asset/jwplayer/7.8.2/skins/bekle.zip",
+            flashplayer: "/player/asset/jwplayer/7.8.2/jwplayer.flash.swf",
+        }); 
+    </script> 
+</body>
+</html>

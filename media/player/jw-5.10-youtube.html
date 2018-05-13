@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/player/asset/test.css" rel="stylesheet" />
+    <script src="/player/asset/jwplayer/5.10/swfobject.js"></script>
+    <script src="/player/asset/jwplayer/5.10/jwplayer.js"></script>
+</head>
+<body>
+    <div id="player-bekle"></div>
+    <script type="text/javascript">
+        jwplayer("player-bekle").setup({
+            //file: "/files/1.mp4",
+            //file: "https://drive.google.com/file/d/1B_DuOqTAQOcZjuls6bw9Tnx_0nd8qpr8/view",
+            //file: "https://drive.google.com/file/d/1TG-FDU0cZ48vaJCMcAO33iNOuNqgL9BH/view",
+            //file: "https://drive.google.com/uc?export=download&id=1B_DuOqTAQOcZjuls6bw9Tnx_0nd8qpr8",
+            //file: "/media/files/1B_DuOqTAQOcZjuls6bw9Tnx_0nd8qpr8.mp4",
+            file: "/media/files/1TG-FDU0cZ48vaJCMcAO33iNOuNqgL9BH.mp4",
+            height: 350,
+            width: 600,
+            skin: "/player/asset/jwplayer/5.10/skins/bekle.zip",
+            flashplayer: "/player/asset/jwplayer/5.10/player.swf", 
+            events: {
+                onReady: function () {
+                    console.log("the video is ready to play!");
+                    this.play();
+                },
+            }
+        }); 
+    </script> 
+    <hr />
+    <!--<video controls="controls">
+        <source src="https://drive.google.com/uc?export=download&id=1B_DuOqTAQOcZjuls6bw9Tnx_0nd8qpr8" type='video/webm' />
+    </video>-->
+</body>
+</html>
